@@ -3,23 +3,23 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro numero
+		inteiro positivo, contador
+		positivo = 0
+		
+		faca {
 
-		faca
-		{
-			escreva("Digite um número inteiro: ")
-			leia(numero)
-
-			se (numero < 0) {
-				escreva("Atenção! Número negativo digitado.")
+			escreva("Digite um número inteiro positivo: ")
+			leia(positivo)
+			
+			se (positivo > 0) {
+				para (contador = 1; contador <= positivo; contador++) {
+					escreva(contador + ", ")
+				}
+			} senao {
+				escreva("O número deve ser positivo, escreva novamente.\n")
 			}
-		} enquanto (numero < 0)
-
-		se (numero % 2 == 0) {
-			escreva("Número par")
-		} senao {
-			escreva("Número ímpar")
-		}
+			
+		} enquanto (positivo <= 0)
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -27,7 +27,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 327; 
+ * @POSICAO-CURSOR = 271; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
